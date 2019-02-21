@@ -148,7 +148,11 @@ class XmlSerializationVisitor extends AbstractVisitor
 
     public function visitDouble($data, array $type, Context $context)
     {
-        return $this->visitNumeric($data, $type);
+        if (floor($data) === $data) {
+            return $this->document->createTextNode($data . '.0');
+        } else {
+            return $this->document->createTextNode(json_encode((float) $data));
+        }
     }
 
     public function visitArray($data, array $type, Context $context)

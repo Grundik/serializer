@@ -13,10 +13,11 @@
         {
             "name": "Asmir Mustafic",
             "email": "goetas@gmail.com"
-        }        
+        }
     ],
     "require": {
         "php": "^5.5|^7.0",
+        "ext-json": "*",
         "jms/metadata": "^1.3",
         "jms/parser-lib": "1.*",
         "phpoption/phpoption": "^1.1",
